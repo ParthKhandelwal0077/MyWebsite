@@ -7,27 +7,27 @@ import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    image: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "CaseMate- your AI legal assistant",
+    category: "Web Development | AI | Legal",
+    image: "/Casemate.jpeg",
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    category: "UI/UX Design",
-    image: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Portfolio Website For artist",
+    category: "Web Development | UI/UX Design",
+    image: "/Portfolio.png",
   },
   {
     id: 3,
-    title: "Mobile Banking App",
-    category: "App Development",
-    image: "https://images.pexels.com/photos/6347729/pexels-photo-6347729.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "HelpDesk for a startup",
+    category: "Web Development",
+    image: "/Ticket.png",
   },
   {
     id: 4,
-    title: "3D Game Interface",
-    category: "Game Development",
-    image: "https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Portfolio Website",
+    category: "Web Development",
+    image: "/My.png",
   },
 ];
 

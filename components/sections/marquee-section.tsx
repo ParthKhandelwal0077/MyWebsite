@@ -32,10 +32,6 @@ const marqueeItems = [
   "✦",
   "SOMETIMES GOOD AT CODING",
   "✦",
-  
-
-  
-  
 ];
 
 export default function MarqueeSection() {
@@ -54,12 +50,10 @@ export default function MarqueeSection() {
     
     // Setup horizontal scrolling animation
     const setupMarquee = () => {
-      const totalWidth = itemsEl.offsetWidth;
-      
       gsap.to(marqueeEl.children, {
-        xPercent: -100,
+        xPercent: -100 ,
         repeat: -1,
-        duration: 20,
+        duration: 25,
         ease: "none",
         modifiers: {
           xPercent: gsap.utils.unitize(x => parseFloat(x) % 100)
@@ -81,10 +75,10 @@ export default function MarqueeSection() {
       window.removeEventListener('resize', handleResize);
       gsap.killTweensOf(marqueeEl.children);
     };
-  }, []);
+  }, []);  // Add direction as dependency
 
   return (
-    <div className="relative mt-25 -rotate-6 scale-110 py-12 md:py-20 overflow-hidden bg-card">
+    <div className={`relative py-16 md:py-24 overflow-hidden bg-card -rotate-6`}>
       {/* Gradient overlays for fade effect */}
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card to-transparent z-10"></div>
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card to-transparent z-10"></div>
@@ -96,7 +90,7 @@ export default function MarqueeSection() {
             {marqueeItems.map((item, index) => (
               <div 
                 key={`${item}-${index}`} 
-                className={`text-4xl md:text-6xl lg:text-7xl font-bold px-4 md:px-8 ${item === "✦" ? "text-accent" : "cosmic-text"}`}
+                className={`text-5xl md:text-8xl lg:text-9xl font-bold px-6 md:px-8 ${item === "✦" ? "text-accent" : "cosmic-text"}`}
               >
                 {item}
               </div>

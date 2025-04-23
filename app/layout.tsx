@@ -4,7 +4,6 @@ import { Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import { Toaster } from '@/components/ui/toaster';
-import CustomCursor from '@/components/custom-cursor';
 import { FloatingDock } from '@/components/ui/floating-dock';
 import {
   IconBrandGithub,
@@ -16,6 +15,7 @@ import {
   IconBrandLinkedin,
   IconBrandInstagram,
 } from "@tabler/icons-react";
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
@@ -71,7 +71,7 @@ const links = [
     icon: (
       <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "https://www.instagram.com/parthkhandelwal01/",
   },
 ];
 
@@ -80,14 +80,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-
-  
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <CustomCursor />
           <Navbar />
           <main>{children}</main>
           <Toaster />

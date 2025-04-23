@@ -48,12 +48,12 @@ export default function HeroSection() {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="h-[500px] w-full hidden md:block">
+          <div className="h-[300px] md:h-[600px] w-full">
             <Canvas camera={{ position: [0, 0, 5], fov: 50 }} id="canvas" >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
-              <Fireball position={[0, -1, 0]} scale={1.6} />
-              <OrbitControls enableZoom={false}  enablePan={false} enableRotate={false}/>
+              <Fireball position={[0, -1, 0]} scale={window.innerWidth < 768 ? 1.2 : 1.8} />
+              <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
             </Canvas>
           </div>
 

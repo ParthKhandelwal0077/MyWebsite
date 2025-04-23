@@ -20,8 +20,8 @@ export default function Fireball(props: GroupProps) {
   // Rotation animation
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.5 // Adjust speed by changing multiplier
-      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime) * 0.1 // Slight wobble
+      groupRef.current.rotation.y += delta * 0.7 // Adjust speed by changing multiplier
+      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime) * 0.2 // Slight wobble
     }
   })
   
