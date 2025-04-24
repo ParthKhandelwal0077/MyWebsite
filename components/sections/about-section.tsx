@@ -72,7 +72,7 @@ export default function AboutSection() {
               className="text-lg text-muted-foreground mb-6"
               variants={itemVariants}
             >
-              <TextGenerateEffect words={"I'm a creative web developer and critical thinker with a passion for building immersive, interactive digital experiences that push the boundaries of what's possible on the web. I am constantly looking towards meeting people and building a capitalistic funnel to save flora and fauna."}/>
+              <TextGenerateEffect words={"I'm a creative web developer and critical thinker with a passion for building immersive, interactive digital experiences that push the boundaries of what's possible on the web. I am constantly looking towards meeting people and building a capitalistic funnel to save flora and fauna."} filter={true}/>
             </motion.p>
             <motion.p 
               className="text-lg text-muted-foreground mb-8"

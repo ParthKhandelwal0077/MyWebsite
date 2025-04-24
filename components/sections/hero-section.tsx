@@ -52,7 +52,7 @@ export default function HeroSection() {
             <Canvas camera={{ position: [0, 0, 5], fov: 50 }} id="canvas" >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
-              <Fireball position={[0, -1, 0]} scale={window.innerWidth < 768 ? 1.2 : 1.8} />
+              <Fireball position={[0, -1, 0]} scale={typeof window !== 'undefined' && window.innerWidth < 768 ? 1.2 : 1.8} />
               <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
             </Canvas>
           </div>

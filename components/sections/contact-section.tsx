@@ -48,14 +48,15 @@ export default function ContactSection() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
       }
 
+      const data = await response.json();
+
       toast({
-        title: "Message sent!",
+        title: "Success!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
 
@@ -154,7 +155,7 @@ export default function ContactSection() {
           <motion.form 
             variants={itemVariants} 
             onSubmit={handleSubmit}
-            className="cosmic-border bg-card/50 backdrop-blur-sm p-8 rounded-xl md:col-span-2 relative z-10"
+            className="cosmic-border bg-card/50 backdrop-blur-sm p-8 rounded-xl md:col-span-2 relative "
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               <div className="space-y-2">
@@ -168,7 +169,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="John Doe"
                   required
-                  className="bg-background/50 border-border relative z-20"
+                  className="bg-background/50 border-border relative "
                 />
               </div>
               <div className="space-y-2">
@@ -183,7 +184,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="john@example.com"
                   required
-                  className="bg-background/50 border-border relative z-20"
+                  className="bg-background/50 border-border relative "
                 />
               </div>
             </div>
@@ -198,7 +199,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 placeholder="Project Inquiry"
                 required
-                className="bg-background/50 border-border relative z-20"
+                className="bg-background/50 border-border relative "
               />
             </div>
             <div className="space-y-2 mb-6">
@@ -213,22 +214,23 @@ export default function ContactSection() {
                 placeholder="Tell me about your project..."
                 rows={5}
                 required
-                className="bg-background/50 border-border relative z-20"
+                className="bg-background/50 border-border relative "
               />
             </div>
-            <motion.div 
-              className="text-right"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Button 
-                type="submit" 
-                className="cosmic-gradient px-8 py-2 h-auto"
+              <Button
+                type="submit"
+                className="cosmic-gradient !bg-none text-white hover:brightness-110 transition-all border-0"
+                size="lg"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-fit z-20"
+            >
+                {isSubmitting ? 'Sending...' : 'Let\'s Talk'}
             </motion.div>
+              </Button>
           </motion.form>
         </motion.div>
       </div>
