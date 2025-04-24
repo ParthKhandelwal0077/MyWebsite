@@ -37,6 +37,11 @@ async function connectDB() {
       family: 4, // Use IPv4, skip trying IPv6
       maxPoolSize: 10, // Maintain up to 10 socket connections
       minPoolSize: 1, // Maintain at least 1 socket connection
+      ssl: true,
+      tlsAllowInvalidCertificates: true,
+      tlsAllowInvalidHostnames: true,
+      retryWrites: true,
+      retryReads: true
     };
 
     try {
