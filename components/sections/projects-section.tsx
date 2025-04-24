@@ -24,8 +24,8 @@ const projects = [
     },
     {
       id: 2,
-      title: "Portfolio Website For artist",
-      description: "A creative portfolio website showcasing artist work",
+      title: "Portfolio Website For an artist",
+      description: "A creative portfolio website showcasing artist's work",
       image: "/Portfolio.png",
       category: "Web Development | UI/UX Design",
       link: "https://devershikapandit.com",
