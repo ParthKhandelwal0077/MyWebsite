@@ -19,8 +19,9 @@ const projects = [
       title: "CaseMate- your AI legal assistant",
       description: "Casemate builds transparency between lawyers and their clients, assist clietns to understand their case better using AI generated layman english summaries and flowcharts to understand the case better and help them to make informed decisions",
       image: "/Casemate.jpeg",
-      category: "Web Development | AI | Legal",
-      link: "https://case-mate.vercel.app",
+      category: "Web Development | In Progress",
+      // link: "https://case-mate.vercel.app",
+      link: "https://github.com/ParthKhandelwal0077/CaseMate/actions",
     },
     {
       id: 2,
@@ -35,8 +36,9 @@ const projects = [
       title: "HelpDesk for a startup",
       description: "A secure and intuitive helpdesk for a startup to help them to manage their customers and their queries",
       image: "/Ticket.png",
-      category: "Web Development",
-      link: "https://ask-us-helpdesk.vercel.app",
+      category: "Web Development | In Progress",
+      // link: "https://ask-us-helpdesk.vercel.app",
+      link: "https://github.com/ParthKhandelwal0077/Ticket-Management-MERN",
     },
     {
       id: 4,
