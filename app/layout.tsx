@@ -22,8 +22,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Creative Developer Portfolio',
-  description: 'Interactive portfolio showcasing creative web development projects',
+  title: 'Parth Khandelwal',
+  description: 'Web Developer | Creative Developer ',
 };
 
 const links = [
